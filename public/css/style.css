@@ -1,0 +1,39 @@
+body {
+  font-family: 'Arimo', sans-serif;
+}
+
+#menu-bar{
+  background-color:#34495e;
+}
+#ms{
+  color:white;
+  padding:10px;
+}
+#home{
+  padding: 20px;
+  color:white;
+}
+
+#savedArticles{
+  padding:20px;
+  color:white;
+}
+
+#btn-holder{
+  padding:10px;
+}
+
+#imageHolder{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/crypto_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  padding:100px;
+}
+
+#page-name{
+  text-align:center;
+  color:white;
+}
+
+
