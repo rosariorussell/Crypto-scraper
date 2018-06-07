@@ -10,3 +10,5 @@ var makeDate = function () {
 
   return formattedDate
 }
+
+module.exports = makeDate

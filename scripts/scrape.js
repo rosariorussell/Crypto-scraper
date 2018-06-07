@@ -7,7 +7,7 @@ const scrape = function (cb) {
 
     var $ = cheerio.load(body)
 
-    var cryptos = []
+    var cryptoList = []
 
     $('tbody tr').each(function (i, element) {
       var name = $(this).children('.currency-name').children('.currency-name-container').text().trim()
@@ -19,11 +19,11 @@ const scrape = function (cb) {
           price
         }
 
-        cryptos.push(dataToAdd)
+        cryptoList.push(dataToAdd)
       }
     })
 
-    cb(cryptos)
+    cb(cryptoList)
   })
 }
 
