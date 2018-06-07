@@ -4,31 +4,27 @@ body {
 
 #menu-bar{
   background-color:#34495e;
-}
-#ms{
-  color:white;
-  padding:10px;
-}
-#home{
-  padding: 20px;
-  color:white;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-#savedArticles{
-  padding:20px;
-  color:white;
+#menu-bar span{
+  color: white;
+  padding: 15px;
 }
-
-#btn-holder{
-  padding:10px;
+#titleName{
+  color:white;
+  padding:30px;
+  font-size: 20px;
+  margin-left: 40px;
 }
 
 #imageHolder{
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/crypto_bg.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/crypto_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 250px;
-  padding:100px;
+  height: 200px;
+  padding:50px;
 }
 
 #page-name{

@@ -15,17 +15,15 @@
 <body>
   <div class="container">
     <div class="row" id=menu-bar>
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-4" id="ms">
-            <h4>Crypto Scraper</h4>
-          </div>
-          <div class="col-md-2" id="home">Home</div>
-          <div class="col-md-3" id="savedArticles">Saved</div>
-          <div class="col-md-3" id="btn-holder">
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" id="scrape">GET NEW PRICES</button>
-          </div>
-        </div>
+      <div class="row">
+        <span id="titleName">
+          Crypto Scraper
+        </span>
+        <span id="home">Home</span>
+        <span id="savedArticles">Saved</span>
+        <span id="btn-holder">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="scrape">SCRAPE</button>
+        </span>
       </div>
     </div>
 
@@ -42,9 +40,9 @@
 
     <div class="row">
       <div id="headings">
-        <h1>Click "GET NEW PRICES" to get started</h1>
+        <h1>Click "SCRAPE" to get started</h1>
       </div>
-      <table class="table table-striped" id="nyt-articles">
+      <table class="table table-striped" id="crypto-articles">
         <thead>
           <tr>
             <th scope="col">Title</th>
@@ -96,7 +94,7 @@
 
           <form>
             <fieldset>
-              <textarea style="margin:7px;" id="myTextArea" rows="3" cols="80">Your text here
+              <textarea id="myTextArea" rows="3" cols="80" placeholder="Enter notes">
               </textarea>
             </fieldset>
           </form>

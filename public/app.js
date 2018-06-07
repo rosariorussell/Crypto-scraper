@@ -62,7 +62,7 @@ $(document).ready(function () {
       for (var i = 0; i < data.length; i++) {
         var price = parseFloat(data[i].summary).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
 
-        $('#nyt-articles').append(
+        $('#crypto-articles').append(
           '<tbody><tr><td>' + data[i].title + '</td>' +
           '<td>$' + price + '</td>' +
           "<td><button class='btn btn-success save'> Save Crypto Price </button></td></tr></tbody>"
@@ -84,18 +84,15 @@ $(document).ready(function () {
       url: '/articles'
     }).done(function (data) {
       console.log(data)
-      $('#page-title1').html('S')
-      $('#page-title2').html('AVED')
-      $('#page-title3').html('A')
-      $('#page-title4').html('RTICLES')
-      $('#headings').html('<h1>Saved Articles</h1>')
+      $('#page-title1').html('SAVED CRYPTOS')
+      $('#headings').html('<h1>Saved Cryptos</h1>')
       $('tbody').empty()
 
       for (var i = 0; i < data.length; i++) {
-        $('#nyt-articles').append(
+        $('#crypto-articles').append(
           '<tbody><tr id =' + data[i]._id + ' ><td>' + data[i].title + '</td>' +
           '<td>' + data[i].summary + '</td>' +
-          "<td><button class='btn btn-success articleComments' data-toggle='modal' data-target='#comment' data-id=" + data[i]._id + " >Article Notes</button></td><td><button class='btn btn-danger delete'>Delete Article</button></td></tr></tbody>"
+          "<td><button class='btn btn-success articleComments' data-toggle='modal' data-target='#comment' data-id=" + data[i]._id + " >Add Notes</button></td><td><button class='btn btn-danger delete'>Delete Crypto</button></td></tr></tbody>"
         )
       }// end of for loop
       deleteArticle()
@@ -153,33 +150,4 @@ $(document).ready(function () {
       // });
     })
   })
-}) // END OF DOCUMENT READY
-
-// // When you click the savenote button
-// $(document).on("click", "#savenote", function() {
-//   // Grab the id associated with the article from the submit button
-//   var thisId = $(this).attr("data-id");
-
-//   // Run a POST request to change the note, using what's entered in the inputs
-//   $.ajax({
-//     method: "POST",
-//     url: "/articles/" + thisId,
-//     data: {
-//       // Value taken from title input
-//       title: $("#titleinput").val(),
-//       // Value taken from note textarea
-//       body: $("#bodyinput").val()
-//     }
-//   })
-//     // With that done
-//     .done(function(data) {
-//       // Log the response
-//       console.log(data);
-//       // Empty the notes section
-//       $("#notes").empty();
-//     });
-
-//   // Also, remove the values entered in the input and textarea for note entry
-//   $("#titleinput").val("");
-//   $("#bodyinput").val("");
-// });
+})
