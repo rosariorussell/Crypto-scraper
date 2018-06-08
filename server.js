@@ -41,26 +41,6 @@ test.on('error', function (err) {
   console.log('Mongoose Error:', err)
 })
 
-// var databaseUri ='mongodb://localhost/NYT';
-// mongoose.Promise = Promise;
-// // //=========================================================== #3 mongoDBmLab
-// if(process.env.MONGODB_URI){
-// 	mongoose.connect(process.env.MONGODB_URI)
-// } else{
-// // 	mongoose.connect(databaseUri);
-// 	mongoose.connect("mongodb://localhost/NYT", {
-//   		useMongoClient: true
-// 	});
-// }
-
-//= ==========================================================
-// Set mongoose to leverage built in JavaScript ES6 Promises
-// Connect to the Mongo DB 	WITHOUT HEROKU
-// mongoose.Promise = Promise;
-// mongoose.connect("mongodb://localhost/NYT", {
-//   useMongoClient: true
-// });
-// Routes
 
 // A GET route for scraping the echojs website
 app.get('/scrape', function (req, res) {
